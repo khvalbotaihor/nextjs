@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export function MainLayout({children}) {
+export function MainLayout({children, title = 'Next App'}) {
     return (
         <>
             <Head>
