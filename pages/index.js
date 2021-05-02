@@ -4,7 +4,7 @@ import {MainLayout} from "../components/MainLayout";
 
 export default function Index() {
     return (
-        <MainLayout>
+        <MainLayout title='Home Page'>
             <h1>Hello Next.JS!</h1>
             <p>lorem ipsum dolores</p>
             <p><Link href={'/about'}><a>About</a></Link></p>
