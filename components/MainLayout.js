@@ -25,6 +25,10 @@ export function MainLayout({children}) {
             }
             nav a {
                 color: #fff;
+                text-decoration: none;
+            }
+            main {
+                margin-top: 60px;
             }
             `}</style>
         </>
