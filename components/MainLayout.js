@@ -11,6 +11,7 @@ export function MainLayout({children}) {
             <main>
                 {children}
             </main>
+            <style jsx></style>
         </>
 
     )
