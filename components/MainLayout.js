@@ -20,6 +20,9 @@ export function MainLayout({children}) {
             right: 0;
             background: darkblue;
             }
+            nav a {
+                color: #fff;
+            }
             `}</style>
         </>
 
