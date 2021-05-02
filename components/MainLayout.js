@@ -13,7 +13,8 @@ export function MainLayout({children}) {
             </main>
             <style jsx>{`
             nav {
-            
+            position: fixed;
+            height:60px;
             }
             `}</style>
         </>
