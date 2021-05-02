@@ -19,6 +19,9 @@ export function MainLayout({children}) {
             left: 0;
             right: 0;
             background: darkblue;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;            
             }
             nav a {
                 color: #fff;
