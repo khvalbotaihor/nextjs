@@ -15,6 +15,9 @@ export function MainLayout({children}) {
             nav {
             position: fixed;
             height:60px;
+            left: 0;
+            right: 0;
+            background: darkblue;
             }
             `}</style>
         </>
