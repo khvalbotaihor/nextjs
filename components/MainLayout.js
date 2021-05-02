@@ -11,7 +11,7 @@ export function MainLayout({children}) {
             <main>
                 {children}
             </main>
-            <style jsx global>{`
+            <style jsx>{`
             nav {
             position: fixed;
             top: 0;
