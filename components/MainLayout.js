@@ -1,4 +1,4 @@
-export function MainLayout() {
+export function MainLayout({children}) {
     return (
         <>
             <nav>
