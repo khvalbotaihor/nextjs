@@ -4,7 +4,7 @@ import Router from 'next/router'
 export default function Index() {
 
     const linkClickHandler = () => {
-
+        Router.push('/')
     }
 
     return (
