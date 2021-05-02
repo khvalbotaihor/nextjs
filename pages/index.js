@@ -4,7 +4,8 @@ import Head from 'next/head'
 export default function Index() {
     return (
         <>
-            <Head><title></title></Head>
+            <Head><title>Next title index hello
+            </title></Head>
             <h1>Hello Next.JS!</h1>
             <p>lorem ipsum dolores</p>
             <p><Link href={'/about'}><a>About</a></Link></p>
