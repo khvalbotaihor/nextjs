@@ -3,7 +3,7 @@ import {MainLayout} from "../../components/MainLayout";
 
 export default function Post() {
     const router = useRouter()
-    return <MainLayout>
+    return <MainLayout title={'Post page'}>
         <h1>Post {router.query.id}</h1>
     </MainLayout>
 }
