@@ -1,11 +1,12 @@
 import Document, {Html, Head, Main, NextScript} from 'next/document'
 
-class MyDocument extends Document {
+export default class MyDocument extends Document {
     render() {
         return (
             <Html>
                 <Head>
-                    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+                    <link rel="preconnect" href="https://fonts.gstatic.com" />
+                    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet" />
                 </Head>
                 <body>
                      <Main/>
@@ -15,5 +16,3 @@ class MyDocument extends Document {
         )
     }
 }
-
-export default MyDocument

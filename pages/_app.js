@@ -2,9 +2,9 @@ export default function MyApp({Component, pageProps}) {
     return (
         <>
             <Component {...pageProps}/>
-            <style jsx>{`
+            <style jsx global>{`
             body {
-                font-family: 'Roboto', sans-serif;
+                font-family: 'Zen Dots', cursive;
             }
             `}</style>
         </>
