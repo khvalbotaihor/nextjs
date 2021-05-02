@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 export function MainLayout({children}) {
     return (
         <>
             <nav>
-                <h1>Navigation</h1>
+                <Link href=''><a></a></Link>
             </nav>
             <main>
                 {children}
