@@ -11,7 +11,7 @@ export default function Index() {
         <React.Fragment>
             <h1>About Page</h1>
             <button onClick={linkClickHandler}>Go back to home</button>
-            <button onClick={() => Router.push('/posts')}>Go back to inline home</button>
+            <button onClick={() => Router.push('/posts')}>Go to posts</button>
         </React.Fragment>
     )
 }
