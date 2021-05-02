@@ -14,6 +14,7 @@ export function MainLayout({children}) {
             <style jsx>{`
             nav {
             position: fixed;
+            top: 0;
             height:60px;
             left: 0;
             right: 0;
