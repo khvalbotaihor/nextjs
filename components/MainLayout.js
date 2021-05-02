@@ -3,6 +3,9 @@ import Link from "next/link";
 export function MainLayout({children}) {
     return (
         <>
+            <Head>
+                <title></title>
+            </Head>
             <nav>
                 <Link href='/'><a>Home</a></Link>
                 <Link href='/about'><a>About</a></Link>
