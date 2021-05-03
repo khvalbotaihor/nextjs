@@ -52,7 +52,7 @@ Posts.getInitialProps = async ({req}: NextPageContext) => {
         return {posts: null}
     }
 
-    const response = await fetch("http://localhost:4200/posts");
+    const response = await fetch(`${process.env.API_URL}/posts`);
     const posts: MyPost = await response.json();
 
     return {
