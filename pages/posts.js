@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react';
 import Link from "next/link";
 import {useRouter} from "next/router";
 
-export default function Posts({posts}) {
+export default function Posts({postsData}) {
 
     const [posts, setPosts] = useState([])
     useEffect(() => {
@@ -12,17 +12,25 @@ export default function Posts({posts}) {
           const json = await response.json();
           setPosts(json)
         }
-        if (!posts ){
+        if (!postsData ){
             load()
         }
     },[])
+
+    if (!posts){
+        return (
+            <MainLayout>
+                <p>Loading ...</p>
+            </MainLayout>
+        )
+    }
 
     return (
         <MainLayout title={'Posts page'}>
             <h1>Posts Page</h1>
             <p>lorem ipsum</p>
            <ul>
-               {posts.map(post => (
+               {postsData.map(post => (
                    <li key={post.id}>
                        <Link href={`/post/[]`} as={`/post/${post.id}`}>
                            <a>{post.title}</a>
