@@ -3,6 +3,7 @@ import {MainLayout} from "../../components/MainLayout";
 import Link from "next/link";
 import {useRouter} from "next/router";
 import {NextPageContext} from "next";
+import {MyPost} from "../../interfaces/post";
 
 export default function Post({post: serverPost}) {
 
@@ -38,7 +39,7 @@ Post.getInitialProps = async ({query, req}: NextPageContext) => {
         return {post: null}
     }
     const response = await fetch(`http://localhost:4200/posts/${query.id}`);
-    const post = await response.json();
+    const post: MyPost = await response.json();
     return {
         post
     }
