@@ -11,7 +11,9 @@ export default function Post({post: serverPost}) {
             const data = await response.json();
             setPost(data)
         }
-        load()
+        if (!post){
+            load();
+        }
     }, [])
 
     return <MainLayout title={'Post page'}>
