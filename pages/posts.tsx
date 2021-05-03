@@ -2,6 +2,10 @@ import {MainLayout} from "../components/MainLayout";
 import {useState, useEffect} from 'react';
 import Link from "next/link";
 
+interface PostsPageProps {
+    posts: any[]
+}
+
 export default function Posts({posts: serverPosts}) {
 
     const [posts, setPosts] = useState(serverPosts)
