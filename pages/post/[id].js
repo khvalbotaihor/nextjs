@@ -8,9 +8,9 @@ export default function Post({post: serverPost}) {
     useEffect(() => {
         async function load() {
             const response = await fetch(`http://localhost:4200/posts/${query.id}`);
-            const post = await response.json();
+            const data = await response.json();
+            setPost(data)
         }
-
         load()
     }, [])
 
