@@ -1,9 +1,10 @@
 import {MainLayout} from "../components/MainLayout";
 import {useState, useEffect} from 'react';
 import Link from "next/link";
+import {MyPost} from "../interfaces/post";
 
 interface PostsPageProps {
-    posts: any[]
+    posts: MyPost[]
 }
 
 export default function Posts({posts: serverPosts}) {
