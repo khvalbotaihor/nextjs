@@ -11,7 +11,7 @@ export default function Post({post: serverPost}) {
             const data = await response.json();
             setPost(data)
         }
-        if (!post){
+        if (!serverPost){
             load();
         }
     }, [])
