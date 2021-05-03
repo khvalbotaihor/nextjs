@@ -18,7 +18,7 @@ export default function Posts() {
             <h1>Posts Page</h1>
             <p>lorem ipsum</p>
            <pre>
-               {JSON.stringify(posts)}
+               {JSON.stringify(posts, null, 2)}
            </pre>
         </MainLayout>
     )
