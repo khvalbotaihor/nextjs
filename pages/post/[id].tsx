@@ -34,10 +34,17 @@ export default function Post({post: serverPost}) {
     </MainLayout>
 }
 
+interface PostNextPageContext extends NextPageContext {
+    query: {
+        id: string
+    }
+}
+
 Post.getInitialProps = async ({query, req}: NextPageContext) => {
     if (!req) {
         return {post: null}
     }
+
     const response = await fetch(`http://localhost:4200/posts/${query.id}`);
     const post: MyPost = await response.json();
     return {
