@@ -16,6 +16,12 @@ export default function Post({post: serverPost}) {
         }
     }, [])
 
+    if (!post){
+        return <MainLayout>
+            <p>Loading...</p>
+        </MainLayout>
+    }
+
     return <MainLayout title={'Post page'}>
         <h2>{post.title}</h2>
         <hr/>
