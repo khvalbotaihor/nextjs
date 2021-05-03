@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import {MainLayout} from "../../components/MainLayout";
 import Link from "next/link";
 import {useRouter} from "next/router";
+import {NextPageContext} from "next";
 
 export default function Post({post: serverPost}) {
 
@@ -32,7 +33,7 @@ export default function Post({post: serverPost}) {
     </MainLayout>
 }
 
-Post.getInitialProps = async ({query, req}) => {
+Post.getInitialProps = async ({query, req}: NextPageContext) => {
     if (!req) {
         return {post: null}
     }
