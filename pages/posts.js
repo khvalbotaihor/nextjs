@@ -17,9 +17,9 @@ export default function Posts() {
         <MainLayout title={'Posts page'}>
             <h1>Posts Page</h1>
             <p>lorem ipsum</p>
-            <ul>
-
-            </ul>
+           <pre>
+               {JSON.stringify(posts)}
+           </pre>
         </MainLayout>
     )
 }
