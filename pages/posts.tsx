@@ -52,7 +52,7 @@ Posts.getInitialProps = async ({req}) => {
     }
 
     const response = await fetch("http://localhost:4200/posts");
-    const posts = await response.json();
+    const posts: MyPost = await response.json();
 
     return {
         posts
