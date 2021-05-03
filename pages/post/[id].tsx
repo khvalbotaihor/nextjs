@@ -5,7 +5,11 @@ import {useRouter} from "next/router";
 import {NextPageContext} from "next";
 import {MyPost} from "../../interfaces/post";
 
-export default function Post({post: serverPost}) {
+interface PostPageProps {
+    post: MyPost
+}
+
+export default function Post({post: serverPost}: PostPageProps) {
 
     const [post, setPost] = useState(serverPost);
     const router = useRouter();
@@ -40,7 +44,7 @@ interface PostNextPageContext extends NextPageContext {
     }
 }
 
-Post.getInitialProps = async ({query, req}: NextPageContext) => {
+Post.getInitialProps = async ({query, req}: PostNextPageContext) => {
     if (!req) {
         return {post: null}
     }
