@@ -1,7 +1,7 @@
 import {MainLayout} from "../../components/MainLayout";
 import Link from "next/link";
 
-export default function Post({post}) {
+export default function Post({post: serverPost}) {
     return <MainLayout title={'Post page'}>
         <h2>{post.title}</h2>
         <hr/>
