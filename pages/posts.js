@@ -5,14 +5,14 @@ import {useRouter} from "next/router";
 
 export default function Posts({posts: serverPosts}) {
 
-    const [posts, setPosts] = useState([])
+    const [posts, setPosts] = useState(serverPosts)
     useEffect(() => {
         async function load() {
           const response = await fetch("http://localhost:4200/posts");
           const json = await response.json();
           setPosts(json)
         }
-        if (!postsData ){
+        if (!serverPosts ){
             load()
         }
     },[])
@@ -30,7 +30,7 @@ export default function Posts({posts: serverPosts}) {
             <h1>Posts Page</h1>
             <p>lorem ipsum</p>
            <ul>
-               {postsData.map(post => (
+               {posts.map(post => (
                    <li key={post.id}>
                        <Link href={`/post/[]`} as={`/post/${post.id}`}>
                            <a>{post.title}</a>
@@ -42,7 +42,11 @@ export default function Posts({posts: serverPosts}) {
     )
 }
 
-Posts.getInitialProps = async () => {
+Posts.getInitialProps = async ({req}) => {
+    if (!req) {
+        return {posts: null}
+    }
+
     const response = await fetch("http://localhost:4200/posts");
     const posts = await response.json();
 
