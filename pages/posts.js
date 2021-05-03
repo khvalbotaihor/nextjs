@@ -10,6 +10,7 @@ export default function Posts() {
           const json = await response.json();
           setPosts(json)
         }
+        load();
     },[])
 
     return (
