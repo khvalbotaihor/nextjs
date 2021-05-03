@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react';
 import Link from "next/link";
 import {useRouter} from "next/router";
 
-export default function Posts({postsData}) {
+export default function Posts({posts: serverPosts}) {
 
     const [posts, setPosts] = useState([])
     useEffect(() => {
