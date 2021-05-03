@@ -1,7 +1,7 @@
 import {MainLayout} from "../components/MainLayout";
 import {useState, useEffect} from 'react';
 
-export default function Posts() {
+export default function Posts({posts}) {
 
 /*    const [posts, setPosts] = useState([])
     useEffect(() => {
@@ -18,7 +18,7 @@ export default function Posts() {
             <h1>Posts Page</h1>
             <p>lorem ipsum</p>
            <pre>
-               {JSON.stringify([], null, 2)}
+               {JSON.stringify(posts, null, 2)}
            </pre>
         </MainLayout>
     )
