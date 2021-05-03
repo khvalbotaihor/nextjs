@@ -7,7 +7,7 @@ interface PostsPageProps {
     posts: MyPost[]
 }
 
-export default function Posts({posts: serverPosts}) {
+export default function Posts({posts: serverPosts}: PostsPageProps) {
 
     const [posts, setPosts] = useState(serverPosts)
     useEffect(() => {
