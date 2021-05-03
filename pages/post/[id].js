@@ -11,7 +11,6 @@ export default function Post({posts}) {
 }
 
 Post.getInitialProps = async (ctx) => {
-console.log(ctx.query)
     const response = await fetch(`http://localhost:4200/post/${ctx.query.id}`);
     const post = await response.json();
 
