@@ -21,7 +21,7 @@ export default function Posts({posts}) {
            <ul>
                {posts.map(post => (
                    <li key={post.id}>
-                       <Link href={`/post/[]}`}>
+                       <Link href={`/post/[]`}>
                            <a>{post.title}</a>
                        </Link>
                    </li>
