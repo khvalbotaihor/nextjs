@@ -2,7 +2,7 @@ import {NextApiRequest, NextApiResponse} from "next";
 
 interface MessageNextApiRequest extends NextApiRequest{
     query: {
-        message: string
+        message?: string
     }
 }
 
