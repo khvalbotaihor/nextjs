@@ -32,7 +32,6 @@ export default function Post({post: serverPost}) {
     </MainLayout>
 }
 
-/*
 Post.getInitialProps = async ({query, req}) => {
     if (!req) {
         return {post: null}
@@ -42,13 +41,14 @@ Post.getInitialProps = async ({query, req}) => {
     return {
         post
     }
-}*/
+}
 
+/*
 export async function getServerSideProps({query, req}) {
-    if (!req) {
+/!*    if (!req) {
         return {post: null}
-    }
+    }*!/
     const response = await fetch(`http://localhost:4200/posts/${query.id}`);
     const post = await response.json();
     return {props: {post}}
-}
+}*/
