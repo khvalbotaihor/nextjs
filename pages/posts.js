@@ -6,7 +6,7 @@ export default function Posts() {
     const [posts, setPosts] = useState([])
     useEffect(() => {
         async function load() {
-            fetch("http://localhost:4200/posts")
+           await fetch("http://localhost:4200/posts")
         }
     },[])
 
