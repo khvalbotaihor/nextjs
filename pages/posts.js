@@ -17,9 +17,13 @@ export default function Posts({posts}) {
         <MainLayout title={'Posts page'}>
             <h1>Posts Page</h1>
             <p>lorem ipsum</p>
-           <pre>
-               {JSON.stringify(posts, null, 2)}
-           </pre>
+           <ul>
+               {posts.map(post => (
+                   <li key={post.id}>
+                       <Link href={`/post/${post.id}`}>{post.title}</Link>
+                   </li>
+               ))}
+           </ul>
         </MainLayout>
     )
 }
