@@ -1,13 +1,15 @@
 import {useState, useEffect} from 'react'
 import {MainLayout} from "../../components/MainLayout";
 import Link from "next/link";
+import {useRouter} from "next/router";
 
 export default function Post({post: serverPost}) {
 
     const [post, setPost] = useState(serverPost);
+    const router = useRouter();
     useEffect(() => {
         async function load() {
-            const response = await fetch(`http://localhost:4200/posts/${query.id}`);
+            const response = await fetch(`http://localhost:4200/posts/${router.query.id}`);
             const data = await response.json();
             setPost(data)
         }
