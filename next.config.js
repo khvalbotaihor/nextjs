@@ -3,6 +3,6 @@ require('dotenv').config()
 
 module.exports = {
     env: {
-        API_URL: 'http://localhost:4300'
+        API_URL: process.env.API_URL
     }
 }
