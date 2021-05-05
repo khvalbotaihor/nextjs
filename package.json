@@ -9,6 +9,7 @@
     "start": "next start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "deployGH": "next build && next export -o docs && git checkout -- docs/CNAME && git checkout -- docs/.nojekyll && git add docs && git commit -m \"chore: regen site\" && git push origin master",
     "serve": "concurrently \"npm run dev\" \"npm run mock\" ",
     "mock": "json-server -w db.json -p 4300 -d 1750"
   },
