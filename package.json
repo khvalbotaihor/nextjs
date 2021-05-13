@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p $PORT",
+    "start": "concurrently \"npm run dev\" \"npm run mock\" -p $PORT",
     "heroku-postbuild": "npm run build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
