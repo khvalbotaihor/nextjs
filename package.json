@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p $PORT",
-    "start:dev": "concurrently \"npm run dev\" \"npm run mock\" ",
+    "start:dev": "concurrently \"npm run dev\" \"json-server -w db.json -p 4300 -d 1750\" ",
     "heroku-postbuild": "npm run build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
